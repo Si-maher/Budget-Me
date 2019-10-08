@@ -21,6 +21,12 @@ submitBudgetForm(){
   if(value === '' || value <0){
     this.budgetFeedback.classList.add('showItem')
     this.budgetFeedback.innerHTML = `<p>value cannot be empty or negative</p>`
+    // This new const is needed because otherwise 'this' is only a  local variable 
+    const removeText = this
+    setTimeout(function(){
+      removeText.budgetFeedback.classList.remove('showItem')
+
+    },4000)
   }
 }
 
