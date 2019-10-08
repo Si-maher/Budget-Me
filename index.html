@@ -64,12 +64,38 @@
                         <!-- expense feedback  -->
                         <div class="expense-feedback alert alert-danger text-capitalize">expense feedback</div>
                         <!-- expense form  -->
-                        
+                        <form id="expense-form" class="expense-form">
+                            <h5 class="text-capitalize">plese enter your expense</h5>
+                            <div class="form-group">
+                                <input type="text" class="form-control expense-input" id="expense-input">
+                            </div>
+                            <h5 class="text capitalize">please enter your expense amount</h5>
+                            <div class="form-group">
+                                <input type="number" class="form-control expense -input" id="amount-input">
+                            </div>
+                            <!-- submit button  -->
+                            <button type="submit" class="btn text-capitalize expense-submit" id="expense-submit">add expense</button>
+                        </form>
                     </div>
+                    <div class="col-md-7 my-3">
+                        <!-- expense list  -->
+                        <div class="expense-list" id="expense-list">
+                            <div class="expense-list__info d-flex justify-content-between text-capitalize">
+                                <h5 class="list-item">expense title</h5>
+                                <h5 class="list-item">expense value</h5>
+                                <h5 class="list-item"></h5>
+                            </div>
+
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
     </div>
     <script src="index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
 </body>
 </html>
