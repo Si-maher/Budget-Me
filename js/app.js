@@ -16,3 +16,17 @@ class UI {
     this.itemID = 0;
   }
 }
+
+function eventListener() {
+  const budgetForm = document.getElementById('budget-form')
+  const expenseForm = document.getElementById('expense-form')
+  const expenseList = document.getElementById('expense-list')
+}
+document.addEventListener('DOMContentLoaded', function (){
+  eventListener()
+})
+
+
+
+
+
