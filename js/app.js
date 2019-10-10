@@ -15,7 +15,7 @@ class UI {
     this.itemList = [];
     this.itemID = 0;
   }
-// submit budget method 
+// submit budget method. This function will grab the data which is entered by the user,rendering the results. If no input is detected and the user stills clicks on 'calculate',  message will appear which is controlled by a setTimeout function.
 submitBudgetForm(){
   const value = this.budgetInput.value;
   console.log(value)
@@ -37,6 +37,7 @@ submitBudgetForm(){
     this.showBalance()
   }
 }
+// This function displays the balance and changes the display of the UI
 showBalance() {
   const expense = this.totalExpence()
   const total = parseInt(this.budgetAmount.textContent) - expense
@@ -53,6 +54,23 @@ showBalance() {
     this.balance.classList.remove('showRed', 'showGreen')
     this.balance.classList.add('showBlack')
   }
+}
+// submit Expense form 
+submitExpenseForm() {
+  const expenseValue = this.expenseInput.value
+  const amountValue = this.amountInput.value
+  if (expenseValue === '' || amountValue === '' || amountValue < 0) {
+ this.expenseFeedback.classList.add('showItem')
+ this.expenseFeedback.innerHTML =  `<p>value cannot be empty or negative</p>`
+ const displayText = this
+ setTimeout(function () {
+   displayText.expenseFeedback.classList.remove('showItem')
+ }, 4000)
+  }
+}
+totalExpence() {
+  let total = 1
+  return total
 }
 }
 
@@ -71,6 +89,7 @@ ui.submitBudgetForm()
   // expense form submit 
   expenseForm.addEventListener('submit', function(event ){
 event.preventDefault()
+ui.submitExpenseForm()
   })
   // expence list submit 
   expenseList.addEventListener('click', function( ){
