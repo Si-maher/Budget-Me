@@ -18,7 +18,9 @@ class UI {
 // submit budget method 
 submitBudgetForm(){
   const value = this.budgetInput.value;
+  console.log(value)
   if(value === '' || value <0){
+    console.log(this)
     this.budgetFeedback.classList.add('showItem')
     this.budgetFeedback.innerHTML = `<p>value cannot be empty or negative</p>`
     // This new const is needed because otherwise 'this' is only a  local variable 
@@ -26,10 +28,18 @@ submitBudgetForm(){
     setTimeout(function(){
       removeText.budgetFeedback.classList.remove('showItem')
 
-    },4000)
+    },4000);
+  }
+  else {
+    console.log(this)
+    this.budgetAmount.textContent = value;
+    this.budgetInput.value = ''
+    this.showBalance()
   }
 }
-
+showBalance() {
+  console.log(`hey`)
+}
 }
 
 function eventListener() {
