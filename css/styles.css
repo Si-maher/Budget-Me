@@ -9,6 +9,18 @@
   body {
     background: var(--mainWhite);
     color: var(--mainDark);
+    width: 80%;
+    margin: 0 auto;
+    padding: 5rem;
+    
+    
+  }
+  .container-fluid {
+    -webkit-box-shadow: 10px 10px 62px 16px rgba(0,0,0,1);
+-moz-box-shadow: 10px 10px 62px 16px rgba(0,0,0,1);
+box-shadow: 10px 10px 62px 16px rgba(0,0,0,1);
+
+    
   }
   .budget-feedback,
   .expense-feedback {
@@ -16,12 +28,16 @@
   }
   
   .budget-form {
-    border: 0.15rem solid var(--mainGreen);
+     -webkit-box-shadow: 10px 10px 62px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 62px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 62px 0px rgba(0,0,0,0.75);
     padding: 1rem;
     border-radius: 0.25rem;
   }
   .expense-form {
-    border: 0.15rem solid var(--mainRed);
+     -webkit-box-shadow: 10px 10px 62px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 62px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 62px 0px rgba(0,0,0,0.75);
     padding: 1rem;
     border-radius: 0.25rem;
   }
